@@ -24,14 +24,14 @@ class SettingsViewController: UIViewController {
     //MARK: - IBActions
     @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
         let userDefaults = UserDefaults.standard
-        userDefaults.set(sender.isOn, forKey: "ShouldShowPluto")
+        userDefaults.set(sender.isOn, forKey: .shouldShowPluto)
         
     }
     
     //MARK - Private
     private func updateViews(){
         let userDefaults = UserDefaults.standard
-        shouldShowPlutoSwitch.isOn = userDefaults.bool(forKey: "ShouldShowPluto")
+        shouldShowPlutoSwitch.isOn = userDefaults.bool(forKey: .shouldShowPluto)
     }
     
 }
